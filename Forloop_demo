@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+for i in {1..10}  #i takes the series of number from 1-10
+do
+        echo "i is $i"  #echoing the value of i
+        sleep 5s  #taking a gap for 5s
+done
+
+echo "We are out of our loop"  # adding a echo statement to get to know we're out of our loop
