@@ -1,3 +1,10 @@
+Problem statement:
+Create a bash script to monitors a directory & continuosoly counts the number of files present. 
+The script should print the file count every 10s, & if the directory's empty then it should exit with the message that
+the directory's empty
+
+
+
 #!/bin/bash  #shbang
 
 directory_to_check=$1  #$1 to pass any folder in terminal
@@ -5,7 +12,7 @@ directory_to_check=$1  #$1 to pass any folder in terminal
 while [ "$(ls -A $directory_to_check)" ]  # till the time directory exists keeps loop running
 do file_count=$(ls -l $directory_to_check | wc -l)  # piping the number of file by arranging them in lines present in the directory_to_check into file_count
         echo "File count in the directory is $file_count" # printing the number of lines indicating the number of files present
-        sleep 5 # taking break for 5 secs
+        sleep 10 # taking break for 5 secs
 done
 
 echo "Directory is now empty" # if the looop gets exit then there are no files in the directory
